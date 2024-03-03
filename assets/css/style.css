@@ -377,6 +377,13 @@ ol {
     justify-content: space-between;
 }
 
+.logo{
+    color: #5c79f9;
+}
+.logo:hover{
+    color: white;
+}
+
 
 
 /* # Breadcrumb */
