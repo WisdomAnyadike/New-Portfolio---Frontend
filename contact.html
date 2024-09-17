@@ -207,10 +207,11 @@
             alert('Invalid email')
         } else {
             try {
+                mssgButton.disabled = true
                 const res = await axios.post('https://new-portfolio-backend.onrender.com/api/user/sendmssg', { Name: input1, Email: input2, Subject: input3, Message: input4 })
                 if (res.data.status == 'okay') {
                     alert(res.data.message);
-                    mssgButton.disabled = true
+                    mssgButton.disabled = false
                     // Handle success response from server
                     mssgButton.innerHTML = 'Send Message'
                     NameInput.value = ''
