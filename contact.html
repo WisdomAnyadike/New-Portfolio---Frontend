@@ -198,7 +198,12 @@
         let input3 = SubjectInput.value
         let input4 = MessageInput.value
 
-        if (!pattern.test(input2)) {
+        if (!input1 || !input2 || !input3 || !input3) {
+            mssgButton.innerHTML = 'Send Message'
+            alert('all fields are mandatory')
+        }
+        else if (!pattern.test(input2)) {
+            mssgButton.innerHTML = 'Send Message'
             alert('Invalid email')
         } else {
             try {
