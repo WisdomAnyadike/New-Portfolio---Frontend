@@ -221,7 +221,7 @@
 
             } catch (error) {
                 mssgButton.innerHTML = 'Send Message'
-                alert(error?.response?.data?.message)
+                alert(error?.response?.data?.message ? error?.response?.data?.message : error?.message)
 
             }
 
